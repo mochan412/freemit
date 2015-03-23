@@ -1,0 +1,86 @@
+<div class="send-choose=source fullwidth form-content" ng-controller="FundingCtrl">
+  <h2>Receiver Information</h2>
+  
+  <div class="source-container">
+    <div class="user-sources" ng-if="fundingSource">
+      <h3>Saved Sources</h3>
+      <!-- if there is a funding source -->
+      <ul class="source-list">  
+        <li>Chase Checking (123456)</li>
+        <li>Etrade Financial (097767866)</li>
+      </ul>
+
+      <ul class="form-footer">
+        <li class="alignright">
+          <button class="btn btn-default" ng-click="addSourceFunc()">Add new</button>
+          <button class="btn btn-default">Use selected</button>
+        </li>
+      </ul>
+    </div>
+
+      <!-- if there is no funding source -->
+
+    <div ng-if="!fundingSource" class="no-source">
+      <span>No funding sources. Add a new one below</span>
+    </div>
+
+    <div ng-if="addSource || !fundingSource" class="add-source">
+      <tabset>
+        <tab heading="Bank Account">
+          <div class="source-bank">
+            <ul class="input-list vert">
+              <li>
+                <label for="bank-name">Bank name</label>
+                <input type="text" name="bank-name" />
+              </li>
+
+              <li>
+                <label for="routing-number">Routing number</label>
+                <input type="text" name="routing-number" />
+              </li>
+
+              <li>
+                <label for="account-number">Account number</label>
+                <input type="text" name="account-number" />
+              </li>
+            </ul>
+
+            <div class="check-image">
+            </div>
+          </div>
+        </tab>
+        <tab heading="Credit / Debit Card">
+          <div class="source-card">
+            <ul class="input-list vert">
+              <li>
+                <label for="cc-number">credit card number</label>
+                <input type="text" name="cc-number" />
+              </li>
+
+              <li>
+                <label for="exp-date">Expiration Date</label>
+                <input type="text" name="exp-date" />
+              </li>
+            </ul>
+          </div>
+        </tab>
+        <tab heading="Bitcoin">
+          <div class="source-bitcoin">
+            Static content 2
+          </div>
+        </tab>
+      </tabset>
+   
+    </div>
+  </div>
+
+  <ul class="form-footer">
+    <li class="alignleft">
+      <button class="btn btn-default" ui-sref="send.source">Previous</button>
+    </li>
+    <li class="alignright">
+      <button class="btn btn-default">Save for later</button>
+      <button class="btn btn-default">Continue</button>
+    </li>
+  </ul>
+</div>

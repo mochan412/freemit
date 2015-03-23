@@ -1,0 +1,278 @@
+/* common module styles */
+.source-container {
+  width:600px;
+}
+/* full-width items */
+.fullwidth {
+  position: relative;
+  background-color: #ccc;
+}
+
+.fullwidth:before {
+  content:"";
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:-9999px;
+  right:0;
+  border-left:9999px solid #ccc;
+  box-shadow: 9999px 0px 0px #ccc;
+  z-index: -1;
+}
+
+/* homepage */
+.hero-unit {
+    width: 100%;
+    background-color: #eee;
+}
+
+.hero-unit:before {
+  border-left:9999px solid #eee;
+  box-shadow: 9999px 0px 0px #eee;
+}
+
+.hero-unit .hero-blurb {
+  padding:20px 20px;
+  background-color: #0eb6a0;
+  color:#fff;
+  text-align: center;
+  width:50%;
+  float:right;
+  margin-top:60px;
+}
+
+.hero-unit .hero-blurb h2 {
+  font-weight: 300;
+  font-size:3.8rem;
+  padding-bottom:20px;
+}
+
+.hero-unit .hero-blurb h2 > span {
+  font-size:2.6rem;
+  display: block;
+}
+
+.hero-options {
+  list-style-type: none;
+  text-align: center;
+  clear:both;
+  padding:40px 0 50px;
+}
+
+.hero-options > li {
+  display: inline-block;
+  background-color: #fff;
+  width:255px;
+  margin:0px 6px;
+  padding:30px 10px;
+}
+
+.hero-options h3 {
+  font-weight: 600;
+  font-size:2rem;
+  color:#444;
+}
+
+.hero-options .hp-glyph {
+  font-size:80px;
+  color:#0eb6a0;
+}
+/* forms - generic */
+.form-footer {
+  display: block;
+  border-top:1px dotted #b5b5b5;
+  list-style-type: none;
+  width:100%;
+  overflow: auto;
+  margin:0;
+  padding:1.7rem 0;
+}
+
+.form-footer li {
+  display: inline-block;
+}
+
+.form-footer li.alignright {
+  float:right;
+}
+
+.form-footer li.alignright button {
+  margin-right:1.9rem;
+}
+
+.form-footer li.alignleft {
+  float:left;
+}
+
+.form-footer li.alignleft button {
+  margin-left:1.9rem;
+}
+
+ul.input-list {
+  list-style-type: none;
+  padding:0;
+  margin:0;
+}
+
+ul.input-list label {
+  display: block;
+  font-weight:500;
+  font-size: 1.4rem;
+  margin-bottom: 2px;
+}
+
+ul.input-list input[type="text"] {
+  width:100%;
+  padding:6px 4px;
+  display: block;
+}
+
+ul.input-list > li {
+  padding:4px 0;
+}
+
+/* banners */
+.banner-transfer {
+  background-color:#0eb69f;
+  padding:2.4rem 0;
+}
+
+.banner-transfer * {
+  color:#fff;
+  text-align: center;
+}
+
+.banner-transfer:before {
+  border-left-color:#0eb69f;
+  box-shadow: 9999px 0px 0px #0eb69f;
+}
+
+.banner-transfer h1 {
+  font-size:2.4rem;
+  font-weight: 400;
+  margin:0 0 0 0;
+  padding:0 0 8px 0;
+}
+
+.banner-transfer p {
+  padding:0;
+  margin:0;
+  font-weight: 300;
+}
+
+.banner-transfer .btn-close {
+  position: absolute;
+  right: 0px;
+  top:50%;
+  margin-top:-20px;
+}
+
+/* content */
+.form-content {
+  background-color:#f5f5f5;
+  padding-top:30px;
+}
+
+.form-content:before {
+  border-color:#f5f5f5;
+  box-shadow: 9999px 0px 0px #f5f5f5;
+}
+
+.form-content h2 {
+  font-weight:500;
+  font-size:2rem;
+  text-align: center;
+  margin:0;
+  padding-bottom:10px;
+}
+/* send money module */
+.country-picker {
+  text-align: center;
+  padding-bottom:50px;
+}
+.country-picker .btn-group {
+  margin:0px auto;
+  width:320px;
+}
+
+.country-picker .btn-group > .btn, 
+.country-picker .btn-group > .dropdown-menu {
+  width:100%;
+}
+
+.send-input-form {
+  text-align: center;
+}
+
+.send-input-form label {
+  font-size:2rem;
+  font-weight: 500;
+}
+
+.send-input-form .form-footer {
+  margin-top:30px;
+}
+
+/* funding sources */
+.source-container {
+  width:600px;
+  margin:0px auto;
+  padding-bottom:20px;
+}
+
+.no-source {
+  text-align: center;
+  padding-bottom:20px;
+}
+
+.no-source > span {
+  border-radius:4px;
+  width:320px;
+  display: inline-block;
+  padding:18px 0;
+  background-color: #ff9900;
+  color:#fff;
+  font-size:1.4rem;
+  box-shadow: -1px 1px 5px 0px #999;
+}
+
+.source-container .nav-tabs {
+  border-color:#e6e6e6;
+}
+
+.source-container .nav-tabs > li > a {
+  font-weight:800;
+  padding:3px 15px;
+  color:#333;
+}
+
+.source-container .nav-tabs > li.active {
+  border-bottom:4px solid #0eb6a0;
+}
+
+.source-container .nav-tabs > li.active > a, 
+.source-container .nav-tabs > li.active > a:hover, 
+.source-container .nav-tabs > li.active > a:focus {
+  color:#0eb6a0;
+  background-color: transparent;
+  border:none;
+}
+
+.source-bank {
+  overflow: auto;
+  padding:20px 0;
+}
+
+.source-bank ul.input-list {
+  width:50%;
+  float:left;
+}
+
+.source-bank .check-image {
+  width:50%;
+  float:left;
+  background-repeat: no-repeat;
+  background-image:url("../images/check-image.png");
+  background-position: right 25px;
+  height:200px;
+}

@@ -1,0 +1,30 @@
+body {
+    background: #fafafa;
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+    color: #333;
+}
+
+.navbar {
+    margin-bottom:0;
+}
+
+@media screen and (min-width:768px) {
+    .navbar-header {
+        position: relative;
+        z-index: 1;
+    }
+    .navbar-default .navbar-collapse {
+        position: relative;
+        z-index:0;
+    }
+    .navbar-center {
+        position: absolute;
+        width:100%;
+        text-align: center;
+    }
+
+    .navbar-center > li {
+        display: inline-block;
+        float:none;
+    }
+}
