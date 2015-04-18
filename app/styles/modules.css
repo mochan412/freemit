@@ -33,11 +33,9 @@
 
 .hero-unit .hero-blurb {
   padding:20px 20px;
-  background-color: #0eb6a0;
+  background-color: #149597;
   color:#fff;
   text-align: center;
-  width:50%;
-  float:right;
   margin-top:60px;
 }
 
@@ -112,7 +110,31 @@ ul.input-list {
   list-style-type: none;
   padding:0;
   margin:0;
+  width:100%;
 }
+
+ul.input-list.vertical > li {
+  display: block;
+}
+
+ul.input-list.horizontal {
+  display: table;
+}
+
+ul.input-list.horizontal > li {
+  display: table-cell;
+  padding-left:8px;
+  padding-right:8px;
+}
+
+ul.input-list.horizontal > li:first-child {
+  padding-left:0px;
+}
+
+ul.input-list.horizontal > li:last-child {
+  padding-right:0px;
+}
+
 
 ul.input-list label {
   display: block;
@@ -198,6 +220,24 @@ ul.input-list > li {
 .country-picker .btn-group > .btn, 
 .country-picker .btn-group > .dropdown-menu {
   width:100%;
+}
+
+.transfer-amount {
+  width:360px;
+  margin:0px auto;
+}
+
+.transfer-amount ul.input-list input[type="text"] {
+  display:inline-block;
+  width:70%;
+}
+
+.transfer-amount ul.input-list .curr {
+  display: inline-block;
+  width:30%;
+  font-size:2.2rem;
+  font-weight:300;
+  padding-left:4px;
 }
 
 .send-input-form {

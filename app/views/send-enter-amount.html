@@ -1,17 +1,23 @@
-<div class="send-input-form fullwidth form-content">
-  <form>
-    <div>
-      <label for="transfer-input">Transfer amount</label>
-    </div>
-    <div>
-      <input type="text" name="transfer-input" />
-    </div>
-    <p>Local currency will be selected once you choose a destination.</p>
+<form novalidate name="curr_input_form" ng-submit="currSubmit()">
+  <div class="send-input-form fullwidth form-content">
+      <div>
+        <label for="transfer-input">Transfer amount</label>
+      </div>
+      <div class="transfer-amount">
+        <p>Traveling to: Poland <a ui-sref="send">change</a></p>
+        <ul class="input-list horizontal">
+          <li><input type="text" name="transfer-input" required placeholder="0.00" ng-model="curr.send" /><span class="curr"> USD</span></li>
+          <li>=</li>
+          <li><input type="text" name="transfer-input" required placeholder="0.00" ng-model="curr.receive" /><span class="curr">{{targetCurrency}}</span></li>
+        </ul>
+      </div>
 
-    <ul class="form-footer">
-      <li class="alignright">
-        <button type="button" class="btn btn-primary active" ui-sref="send.source">Continue <span class="glyphicon glyphicon-arrow-right"></span></button>
-      </li>
-    </ul>
-  </form>
-</div>
+
+
+      <ul class="form-footer">
+        <li class="alignright">
+          <button type="button" class="btn btn-primary active"  type="submit" ng-click="updateAmt(amt.usd)" ui-sref="send.source">Continue <span class="glyphicon glyphicon-arrow-right"></span></button>
+        </li>
+      </ul>
+  </div>
+</form>

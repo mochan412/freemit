@@ -33,10 +33,22 @@ angular
 	  editor: 'editor',
 	  guest: 'guest'
 	})
-	.config(function ($stateProvider, $urlRouterProvider, USER_ROLES) {
+	.config(function ($stateProvider, $urlRouterProvider, USER_ROLES, $httpProvider) {
+		
+		/* $httpProvider.defaults.useXDomain = true;
+		$httpProvider.defaults.withCredentials = true;
+		delete $httpProvider.defaults.headers.common["X-Requested-With"];
+		$httpProvider.defaults.headers.common["Accept"] = "application/json";
+		$httpProvider.defaults.headers.common["Content-Type"] = "application/json";*/
+
 		$urlRouterProvider.otherwise('/home');
 		
 		$stateProvider
+			.state('start', {
+        url: '/start',
+        templateUrl: 'views/calculator.html'
+	    })
+
 			.state('send', {
 				url: '/send',
 				templateUrl: 'views/send.html',

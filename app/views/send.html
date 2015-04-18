@@ -6,20 +6,21 @@
   <a class="btn btn-primary btn-close" ng-href="#/"  aria-label="close banner"><span class="glyphicon glyphicon-remove"></span></a>
 </div>
 
-<div ui-view>
-	<!-- default content -->
-	<div class="fullwidth form-content country-picker">
-		<h2>Where do you want to send your card?</h2>
+  <div ui-view ng-controller="SendCtrl" id="container">
+  	<!-- default content -->
+  	<div class="fullwidth form-content country-picker">
+  		<h2>Where do you want to send your card?</h2>
+  		{{coinbase}}
+  		<div class="btn-group country-list" dropdown is-open="status.isopen">
+        <button type="button" class="btn btn-primary dropdown-toggle" dropdown-toggle ng-disabled="disabled">
+          Select a Country <span class="caret"></span>
+        </button>
 
-		<div class="btn-group country-list" dropdown is-open="status.isopen">
-      <button type="button" class="btn btn-primary dropdown-toggle" dropdown-toggle ng-disabled="disabled">
-        Select a Country <span class="caret"></span>
-      </button>
-      <ul class="dropdown-menu" role="menu">
-        <li><a href="#" data-curr="PLN">Poland</a></li>
-        <li><a href="#" data-curr="EUR">Germany</a></li>
-        <li><a href="#" data-curr="JPY">Something else here</a></li>
-      </ul>
-    </div>
-	</div>
-</div>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#" ui-sref="send.amount" ng-click="setTarget('PLN')">Poland</a></li>
+          <li><a href="#" ui-sref="send.amount" ng-click="setTarget('EUR')">Germany</a></li>
+          <li><a href="#" ui-sref="send.amount" ng-click="setTarget('JPY')">Japan</a></li>
+        </ul>
+      </div>
+  	</div>
+  </div>

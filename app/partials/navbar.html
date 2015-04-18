@@ -1,43 +1,14 @@
-<header class="header">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
+<header class="navigation" ng-controller="NavCtrl">
+  <div class="nav-container">
+    <!-- user button - opens hamburger nav -->
+    <a href="#" class="user-button">
+      <span class="user-icon">Paul Pangrazzi</span>
+      <span class="user-currency" ng-class=""><span class="sym">¥</span>3,000</span>
+    </a>
+    <!-- /user button -->
 
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
+    <a href="#" class="calc-button">Freemit</a>
 
-            <a class="navbar-brand" href="#/">freemit</a>
-          </div>
-
-          <div class="collapse navbar-collapse" id="js-navbar-collapse">
-
-            <ul class="nav navbar-nav navbar-center">
-              <li><a ng-href="#/receive">Get a Card</a></li>
-              <li><a ng-href="#/send">Send Money</a></li>
-              <li><a ng-href="#/transfer">Bank Transfer</a></li>
-            </ul>
-
-            <ul class="nav navbar-nav navbar-right">
-              <li ng-if="!currentUser"><a href="#" class="btn btn-default">Log in</a></li>
-              <li ng-if="!currentUser"><a href="#" class="btn btn-default">Sign Up</a></li>
-              <li class="dropdown" ng-if="currentUser">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ currentUser.name }}'s account' <span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu">
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li class="divider"></li>
-                  <li><a href="#">Separated link</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-
-
-        </div>
-      </div>
-    </header>
+    <a href="#" class="notifications-button">notifications</a>
+  </div>
+</header>

@@ -1,0 +1,8 @@
+.nav-panel {
+    background-color:#e7e9eb;
+}
+
+.nav-panel header {
+    position: fixed;
+    top:0px;
+}
