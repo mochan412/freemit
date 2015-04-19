@@ -1,7 +1,57 @@
-<div class="nav-panel" ng-controller="NavCtrl">
-  <div class="panel-container">
+<div class="nav-panel">
+  <div class="container">
     <header>
-      
+      <span class="user-currency USD"></span>
+      <h2>
+        <span class="user-avatar"><img src="/images/pp-headshot-lg.png" /></span>
+        <span class="user-name">Paul Pangrazzi</span>
+      </h2>
+      <a href="#" class="link-back">back</a>
     </header>
+    <div class="current-balance clearfix">
+      <h3>Freemit Balance</h3>
+      <dl class="bal-table">
+        <dt>EUR</dt>
+        <dd>000.00</dd>
+      </dl>
+    </div>
+
+    <div class="converted-balance clearfix">
+      <dl class="bal-table">
+        <dt>USD</dt>
+        <dd>000.00</dd>
+
+        <dt>USD</dt>
+        <dd>000.00</dd>
+
+        <dt>USD</dt>
+        <dd>000.00</dd>
+      </dl>
+    </div>
+
+    <menu class="user-menu">
+      <li class="link-to">Change balance currency</li>
+      <li class="link-to">Add funds</li>
+      <li class="link-to">Change funding source</li>
+      <li class="link-to">View statements</li>
+      <li class="link-to">Cash out</li>
+    </menu>
+
+    <menu class="user-menu">
+      <h3>My Info</h3>
+      <li>Enable location services <input type="checkbox" checked class="toggle-box" /></li>
+      <li>(xxx)-xxx-xxxx <a href="#">remove</a></li>
+      <li>paulpangrazzi@gmail.com <a href="#">remove</a></li>
+      <li class="add-to">+ Add phone or email</li>
+    </menu>
+
+    <menu class="user-menu">
+      <h3>Notifications &amp; Receipts</h3>
+      <li>Push notifications <input type="checkbox" checked class="check-box" /></li>
+      <li>Notify me when my friends join <input type="checkbox" checked class="check-box" /></li>
+      <li>Another field <input type="checkbox" class="check-box" /></li>
+      <li>Another field <input type="checkbox" class="check-box" /></li>
+    </menu>
+
   </div>
 </div>

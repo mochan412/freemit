@@ -4,6 +4,10 @@ body {
     color: #333;
 }
 
+body *, html *{
+	box-sizing: border-box;
+}
+
 .container {
     padding:0;
 }
